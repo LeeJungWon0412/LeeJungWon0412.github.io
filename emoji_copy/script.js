@@ -15,14 +15,14 @@ document.addEventListener('DOMContentLoaded', function () {
       applyFilters();
     } catch (error) {
       console.error('이모지 로딩 실패:', error);
-      emojiGrid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: red;">데이터를 불러오는 데 실패했습니다.</p>';
+      emojiGrid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: red;">데이터를 불러오는 데 실패했삼</p>';
     }
   }
 
   function renderEmojis(filteredEmojis) {
     emojiGrid.innerHTML = '';
     if (filteredEmojis.length === 0) {
-      emojiGrid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #888;">검색 결과가 없습니다.</p>';
+      emojiGrid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #888;">검색 결과가 없삼</p>';
       return;
     }
 
@@ -67,22 +67,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     renderEmojis(filtered);
   }
-
-  // 스크롤 버튼
-  if (scrollBtn) {
-    window.addEventListener('scroll', () => {
-      scrollBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
-    });
-    scrollBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
-
-  // 연도 자동 입력
-  const yearSpan = document.getElementById('current-year');
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
-
-  loadEmojis();
 });
