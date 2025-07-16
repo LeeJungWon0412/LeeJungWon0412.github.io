@@ -1,97 +1,48 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이모지/특수문자 복사 도구 - 이정원의 도구 모음집</title>
-    <link rel="stylesheet" href="../style.css"> <style>
-        /* 이모지/특수문자 도구 전용 스타일 */
-        .emoji-container {
-            max-width: 800px;
-            margin: 2em auto;
-            padding: 2em;
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .emoji-search-bar {
-            width: calc(100% - 20px);
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1em;
-            box-sizing: border-box;
-        }
-
-        .emoji-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-            gap: 10px;
-            text-align: center;
-        }
-
-        .emoji-item {
-            font-size: 2.2em; /* 이모지 크기 */
-            cursor: pointer;
-            padding: 10px;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            transition: background-color 0.2s ease, transform 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 60px; /* 고정 높이 */
-            box-sizing: border-box;
-        }
-
-        .emoji-item:hover {
-            background-color: #e0f2f7; /* 호버 시 배경색 변경 */
-            transform: translateY(-2px);
-        }
-
-        /* 수정된 copy-message 스타일 */
-        .copy-message {
-            text-align: center;
-            padding: 15px;
-            background-color: #d4edda; /* 성공 메시지 배경색 */
-            color: #155724; /* 성공 메시지 글자색 */
-            border: 1px solid #c3e6cb;
-            border-radius: 8px;
-            margin-bottom: 20px; /* 아래쪽 여백 추가 */
-            font-weight: bold;
-            opacity: 0; /* 초기 투명도 0 (숨김) */
-            transition: opacity 0.3s ease-in-out; /* 부드러운 전환 효과 */
-            pointer-events: none; /* 클릭 이벤트 방지 */
-        }
-
-        .copy-message.show { /* JavaScript에서 추가할 클래스 */
-            opacity: 1; /* 표시될 때 투명도 1 */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>간단한 이모지/특수문자 복사 도구 - 이정원의 도구 모음집</title>
+  <meta name="description" content="클릭 한 번으로 이모지와 특수문자를 쉽게 복사하세요. 카테고리와 검색 기능 제공.">
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="emoji.css" />
 </head>
 <body>
-    <header>
-        <h1>이모지/특수문자 복사 도구</h1>
-        <p>원하는 이모지나 특수문자를 클릭해서 복사하삼</p>
-    </header>
+  <header>
+    <a href="/" class="home-top-link">홈으로 돌아가기</a>
+    <h1>간단한 이모지/특수문자 복사 도구</h1>
+    <p>원하는 거 클릭해서 복사하삼</p>
+  </header>
 
-    <main>
-        <div id="copyMessage" class="copy-message">복사 완료</div>
+  <main>
+    <div id="copyMessage" class="copy-message">복사 완료</div>
 
-        <div class="emoji-container">
-            <input type="text" id="emojiSearch" class="emoji-search-bar" placeholder="이모지 또는 특수문자 검색...">
-            <div id="emojiGrid" class="emoji-grid">
-                Loading emojis...
-            </div>
-        </div>
-    </main>
+    <div class="emoji-container">
+      <select id="categoryFilter" class="emoji-category-filter">
+        <option value="all">전체</option>
+        <option value="표정">표정</option>
+        <option value="하트">하트</option>
+        <option value="동물">동물</option>
+        <option value="자연">자연</option>
+        <option value="음식">음식</option>
+        <option value="기념/행사">기념/행사</option>
+        <option value="기호/기타">기호/기타</option>
+        <option value="수학/논리">수학/논리</option>
+        <option value="단위/기호">단위/기호</option>
+      </select>
+      <input type="text" id="emojiSearch" class="emoji-search-bar" placeholder="이모지 또는 이름 검색..." />
+      <div id="emojiGrid" class="emoji-grid">Loading emojis...</div>
+    </div>
+  </main>
 
-    <footer>
-        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+  </footer>
 
-    <script src="../script.js"></script> <script src="script.js"></script> </body>
+  <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+  <script src="../script.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
 </html>

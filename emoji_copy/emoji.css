@@ -1,0 +1,121 @@
+/* 이모지 도구 전용 스타일 */
+.emoji-container {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 2em;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  min-height: 500px;
+  box-sizing: border-box;
+}
+
+.emoji-category-filter {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.emoji-search-bar {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.emoji-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 10px;
+  text-align: center;
+  min-height: 300px;
+}
+
+.emoji-item {
+  font-size: 2.2em;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+.emoji-item:hover {
+  background-color: #e0f2f7;
+  transform: translateY(-2px);
+}
+
+.copy-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  width: fit-content;
+  max-width: 90%;
+  text-align: center;
+  padding: 12px 20px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 8px;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.copy-message.show {
+  opacity: 1;
+}
+
+/* 홈으로 가기 버튼 */
+.home-top-link {
+  display: inline-block;
+  margin-bottom: 10px;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.95em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.home-top-link:hover {
+  background-color: #d0dbdf;
+}
+
+/* 상단 이동 버튼 */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 1.2em;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.scroll-to-top:hover {
+  background-color: #ffff5f;
+  color: #000000;
+}
