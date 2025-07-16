@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>간단한 단위 변환기 - 이정원의 도구 모음집</title>
+    <meta name="description" content="길이, 질량, 부피, 온도 등 13가지 카테고리의 모든 단위를 변환하는 도구입니다.">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>간단한 단위 변환기</h1>
+        <p>원하는 단위를 변환해보삼</p>
+    </header>
+
+    <main>
+        <div class="converter-container">
+            <div class="category-selector">
+                <label for="category">변환하고 싶은 거 선택하삼</label>
+                <select id="category"></select>
+            </div>
+
+            <div class="converter-wrapper">
+                <div class="input-group">
+                    <input type="number" id="inputValue" placeholder="값을 입력하삼">
+                    <select id="fromUnit"></select>
+                </div>
+                <div class="equals-sign">=</div>
+                <div class="input-group">
+                    <input type="text" id="outputValue" readonly>
+                    <select id="toUnit"></select>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

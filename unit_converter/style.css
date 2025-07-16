@@ -1,0 +1,70 @@
+.converter-container {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.category-selector {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.category-selector label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.category-selector select {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.converter-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 250px;
+    flex-grow: 1;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.input-group input[readonly] {
+    background-color: #f4f7f6;
+    cursor: default;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.equals-sign {
+    font-size: 2em;
+    font-weight: bold;
+    color: #34495e;
+    padding: 10px 0;
+}

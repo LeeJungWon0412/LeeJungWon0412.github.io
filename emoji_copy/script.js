@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             applyFilters(); // 데이터 로딩 후 필터링 및 렌더링 실행
         } catch (error) {
             console.error('이모지 로딩에 실패했습니다:', error);
-            emojiGrid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: red;">데이터를 불러오는 데 실패했습니다. 파일을 확인해주세요.</p>';
+            emojiGrid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: red;">데이터를 불러오는 데 실패했삼. 파일을 확인해주삼</p>';
         }
     }
 
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function renderEmojis(filteredEmojis) {
         emojiGrid.innerHTML = ''; // '가져오는 중...' 메시지 지우기
         if (filteredEmojis.length === 0) {
-            emojiGrid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #888;">검색 결과가 없습니다.</p>';
+            emojiGrid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #888;">검색 결과가 없삼</p>';
             return;
         }
 
@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 copyMessage.classList.remove('show');
             }, 2000);
         }).catch(err => {
-            console.error('복사에 실패했습니다:', err);
-            alert('복사에 실패했습니다.');
+            console.error('복사 실패:', err);
+            alert('복사에 실패했삼');
         });
     }
 
