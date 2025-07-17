@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글자 수 세기 - 이정원의 도구 모음집</title>
+    <meta name="description" content="텍스트를 입력하면 공백 포함/제외 글자 수, 단어, 줄 수를 실시간으로 계산해주는 도구입니다.">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="char.css" />
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>글자 수 세기</h1>
+        <p>텍스트를 입력하면 실시간으로 글자 수를 계산해줌</p>
+    </header>
+
+    <main>
+        <div class="counter-container">
+            <textarea id="textInput" placeholder="여기에 텍스트를 입력하삼"></textarea>
+            <div class="result-container">
+                <div class="result-item">
+                    <span>공백 포함</span>
+                    <strong id="countWithSpaces">0</strong>
+                </div>
+                <div class="result-item">
+                    <span>공백 제외</span>
+                    <strong id="countWithoutSpaces">0</strong>
+                </div>
+                <div class="result-item">
+                    <span>단어 수</span>
+                    <strong id="wordCount">0</strong>
+                </div>
+                <div class="result-item">
+                    <span>줄 수</span>
+                    <strong id="lineCount">0</strong>
+                </div>
+            </div>
+            <button id="clearButton">모두 지우기</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+        <p>할 말 있으면 mogaattesu@gmail.com으로 메일 주삼</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
