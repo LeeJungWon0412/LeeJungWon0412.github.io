@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>만 나이, 띠, 별자리 계산기 - 이정원의 도구 모음집</title>
+    <meta name="description" content="생년월일을 입력하면 만 나이, 12간지 띠, 별자리를 한 번에 계산해주는 도구입니다.">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="age.css" />
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>만 나이, 띠, 별자리 계산기</h1>
+        <p>생년월일을 입력하고 만 나이, 띠, 별자리를 알아보삼</p>
+    </header>
+
+    <main>
+        <div class="calculator-container">
+            <h2>생년월일 입력</h2>
+            <div class="input-area">
+                <input type="date" id="birthDate">
+                <button id="calculateButton">계산하기</button>
+            </div>
+            <div id="resultWrapper" class="result-wrapper">
+                <div class="result-item">
+                    <h3>만 나이</h3>
+                    <p id="ageResult">결과가 여기에 표시되삼</p>
+                </div>
+                <div class="result-item">
+                    <h3>십이간지 (띠)</h3>
+                    <p id="zodiacResult">-</p>
+                </div>
+                <div class="result-item">
+                    <h3>별자리</h3>
+                    <p id="starSignResult">-</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+        <p>할 말 있으면 mogaattesu@gmail.com으로 메일 주삼</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
