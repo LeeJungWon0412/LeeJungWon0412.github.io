@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>날짜 계산기 - 이정원의 도구 모음집</title>
+    <meta name="description" content="D-Day 계산, 두 날짜 사이의 일수 계산 등 날짜와 관련된 모든 것을 계산합니다.">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="day.css" />
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>날짜 계산기</h1>
+        <p>D-Day와 날짜 간격을 계산해보삼</p>
+    </header>
+
+    <main>
+        <div class="calculator-section">
+            <h2>D-Day 계산기</h2>
+            <div class="input-area">
+                <label for="ddayDate">목표 날짜를 선택하삼</label>
+                <input type="date" id="ddayDate">
+            </div>
+            <div id="ddayResult" class="result-box">
+                결과가 여기에 표시되삼
+            </div>
+        </div>
+
+        <div class="calculator-section">
+            <h2>날짜 차이 계산기</h2>
+            <div class="date-diff-inputs">
+                <div class="input-area">
+                    <label for="startDate">시작 날짜</label>
+                    <input type="date" id="startDate">
+                </div>
+                <div class="input-area">
+                    <label for="endDate">종료 날짜</label>
+                    <input type="date" id="endDate">
+                </div>
+            </div>
+            <div id="diffResult" class="result-box">
+                결과가 여기에 표시되삼
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+        <p>할 말 있으면 mogaattesu@gmail.com으로 메일 주삼</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

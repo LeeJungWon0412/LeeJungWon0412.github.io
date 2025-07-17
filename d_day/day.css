@@ -1,0 +1,68 @@
+.calculator-section {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.calculator-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1.5em;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-area label {
+    font-weight: bold;
+}
+
+.input-area input[type="date"] {
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    font-size: 1.1em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.date-diff-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.result-box {
+    margin-top: 1.5em;
+    padding: 20px;
+    background-color: #f4f7f6;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2c3e50;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-box .dday-emphasis {
+    background-color: #2c3e50;
+    color: white; /* 흰색 글씨 */
+    border-radius: 5px; /* 둥근 모서리 */
+
+    padding: 3px 8px; /* 안쪽 여백 (상하 3px, 좌우 8px) */
+    margin: 0 4px; /* 바깥 여백 (좌우 4px) */
+    display: inline-block; /* 여백과 패딩이 정확히 적용되도록 설정 */
+    vertical-align: middle; /* 주변 텍스트와 세로 중앙 정렬 */
+}
