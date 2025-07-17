@@ -1,0 +1,53 @@
+.converter-container {
+    max-width: 500px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#color-preview {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    border: 2px solid #2c3e50;
+    margin-bottom: 2em;
+    transition: background-color 0.2s;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-group label {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #34495e;
+    width: 50px;
+}
+
+.input-group input {
+    padding: 10px;
+    border: 2px solid #2c3e50;
+    border-radius: 8px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+}
+
+#hex-input {
+    flex-grow: 1;
+    font-family: monospace;
+}
+
+.multi-input input {
+    width: 100%;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>색상 코드 변환기 - 이정원의 도구 모음집</title>
+    <meta name="description" content="HEX, RGB, HSL 색상 코드를 실시간으로 상호 변환하고 색상을 미리 확인하는 도구입니다.">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="color.css" />
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>색상 코드 변환기</h1>
+        <p>HEX, RGB, HSL 값을 입력해서 실시간으로 변환하삼</p>
+    </header>
+
+    <main>
+        <div class="converter-container">
+            <div id="color-preview" title="색상 미리보기"></div>
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="hex-input">HEX</label>
+                    <input type="text" id="hex-input" value="#ffffff">
+                </div>
+                <div class="input-group multi-input">
+                    <label>RGB</label>
+                    <input type="number" id="rgb-r" min="0" max="255" value="255">
+                    <input type="number" id="rgb-g" min="0" max="255" value="255">
+                    <input type="number" id="rgb-b" min="0" max="255" value="255">
+                </div>
+                <div class="input-group multi-input">
+                    <label>HSL</label>
+                    <input type="number" id="hsl-h" min="0" max="360" value="0">
+                    <input type="number" id="hsl-s" min="0" max="100" value="0">
+                    <input type="number" id="hsl-l" min="0" max="100" value="100">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+        <p>할 말 있으면 mogaattesu@gmail.com으로 메일 주삼</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
