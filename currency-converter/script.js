@@ -1,8 +1,5 @@
-document.addEventListener('DOMContentLoaded', function () {
-    setTimeout(initializeConverter, 100);
-});
-
-async function initializeConverter() {
+document.addEventListener('DOMContentLoaded', async function () {
+    // jQuery 객체로 변수 할당
     const $amountInput = $('#amount');
     const $fromCurrencySelect = $('#fromCurrency');
     const $toCurrencySelect = $('#toCurrency');
@@ -14,13 +11,26 @@ async function initializeConverter() {
     let debounceTimer;
 
     const currencyKoreanNames = {
-        'KRW': '대한민국 원', 'USD': '미국 달러', 'JPY': '일본 엔', 'EUR': '유로', 'CNY': '중국 위안', 
-        'GBP': '영국 파운드', 'AUD': '호주 달러', 'CAD': '캐나다 달러', 'CHF': '스위스 프랑', 'HKD': '홍콩 달러', 
-        'SGD': '싱가포르 달러', 'THB': '태국 바트', 'VND': '베트남 동', 'TWD': '대만 달러', 'PHP': '필리핀 페소', 
-        'ZAR': '남아프리카 공화국 랜드', 'TRY': '터키 리라', 'SEK': '스웨덴 크로나', 'RON': '루마니아 레우', 'PLN': '폴란드 즈워티', 
-        'NZD': '뉴질랜드 달러', 'NOK': '노르웨이 크로네', 'MYR': '말레이시아 링깃', 'MXN': '멕시코 페소', 
-        'ISK': '아이슬란드 크로나', 'INR': '인도 루피', 'ILS': '이스라엘 셰켈', 'IDR': '인도네시아 루피아', 
-        'HUF': '헝가리 포린트', 'DKK': '덴마크 크로네', 'CZK': '체코 코루나', 'BRL': '브라질 헤알', 'BGN': '불가리아 레프'
+        // 아시아
+        'JPY': '일본 엔', 'CNY': '중국 위안', 'TWD': '대만 달러', 'HKD': '홍콩 달러',
+        'THB': '태국 바트', 'PHP': '필리핀 페소', 'VND': '베트남 동', 'IDR': '인도네시아 루피아',
+        'MYR': '말레이시아 링깃', 'SGD': '싱가포르 달러', 'BND': '브루나이 달러', 'BDT': '방글라데시 타카',
+        // 중동
+        'SAR': '사우디아라비아 리얄', 'AED': '아랍에미리트 디르함', 'BHD': '바레인 디나르',
+        'JOD': '요르단 디나르', 'ILS': '이스라엘 셰켈', 'QAR': '카타르 리얄',
+        // 유럽
+        'EUR': '유로', 'GBP': '영국 파운드', 'CHF': '스위스 프랑', 'SEK': '스웨덴 크로나',
+        'DKK': '덴마크 크로네', 'NOK': '노르웨이 크로네', 'CZK': '체코 코루나', 'PLN': '폴란드 즈워티',
+        'HUF': '헝가리 포린트', 'RUB': '러시아 루블', 'TRY': '터키 리라', 'BGN': '불가리아 레프',
+        'RON': '루마니아 레우', 'ISK': '아이슬란드 크로나',
+        // 아메리카
+        'USD': '미국 달러', 'CAD': '캐나다 달러', 'MXN': '멕시코 페소', 'BRL': '브라질 헤알',
+        // 아프리카
+        'ZAR': '남아프리카 공화국 랜드', 'EGP': '이집트 파운드',
+        // 오세아니아
+        'AUD': '호주 달러', 'NZD': '뉴질랜드 달러',
+        // 기타 주요 통화
+        'KRW': '대한민국 원', 'INR': '인도 루피'
     };
 
     function customMatcher(params, data) {
@@ -29,7 +39,6 @@ async function initializeConverter() {
         return null;
     }
 
-    // 기존 convertCurrency 함수를 아래 코드로 전체 교체하세요.
     async function convertCurrency() {
         const amount = parseFloat($amountInput.val());
         const from = $fromCurrencySelect.val();
@@ -40,58 +49,44 @@ async function initializeConverter() {
             $resultDiv.text('유효한 금액을 입력하삼');
             return;
         }
-    
-        $resultDiv.text('계산 중...');
+        if (from === to) {
+            const formattedSameAmount = new Intl.NumberFormat('en-US').format(amount);
+            $resultDiv.text(`${to} ${formattedSameAmount}`);
+            $rateInfoDiv.text('동일한 통화임');
+            return;
+        }
+        $resultDiv.text('계산 중');
         try {
-            if (from === to) {
-                const formattedSameAmount = new Intl.NumberFormat('en-US').format(amount);
-                $resultDiv.text(`${to} ${formattedSameAmount}`);
-                $rateInfoDiv.text('동일한 통화임');
-                return;
-            }
-
             const response = await fetch(`${API_URL}/latest?amount=${amount}&from=${from}&to=${to}`);
             const data = await response.json();
             const convertedAmount = data.rates[to];
-        
-            // --- ▼▼▼ 핵심 변경점: 숫자 서식을 직접 제어 ▼▼▼ ---
-        
-            // 소수점을 사용하지 않는 통화 목록
             const noDecimalCurrencies = ['KRW', 'JPY', 'ISK'];
-        
             let formattedNumber;
-            // 한국 원, 일본 엔 등은 정수로 표현
             if (noDecimalCurrencies.includes(to)) {
                 formattedNumber = new Intl.NumberFormat('en-US').format(Math.round(convertedAmount));
             } else {
-            // 그 외 통화는 소수점 두 자리까지 표현
                 formattedNumber = new Intl.NumberFormat('en-US', {
                     minimumFractionDigits: 2,
                     maximumFractionDigits: 2
                 }).format(convertedAmount);
             }
-
-            // '[통화 코드] [숫자]' 형식으로 통일
             const finalResult = `${to} ${formattedNumber}`;
             $resultDiv.text(finalResult);
-
-            // --- ▲▲▲ ---
-
             const rate = (convertedAmount / amount).toFixed(4);
             $rateInfoDiv.text(`기준일: ${data.date} | 1 ${from} = ${rate} ${to}`);
-
         } catch (error) {
             $resultDiv.text('환율 정보를 가져오는 데 실패했삼');
         }
     }
-    
-    // --- ▼▼▼ 핵심 변경점: 이벤트 리스너를 먼저 설정 ▼▼▼ ---
+
+    // --- 이벤트 리스너를 먼저 설정 ---
     $amountInput.on('input', () => {
         clearTimeout(debounceTimer);
         debounceTimer = setTimeout(convertCurrency, 500);
     });
 
-    $('#fromCurrency, #toCurrency').on('change', convertCurrency);
+    $fromCurrencySelect.on('change', convertCurrency);
+    $toCurrencySelect.on('change', convertCurrency);
 
     $swapButton.on('click', () => {
         const fromVal = $fromCurrencySelect.val();
@@ -99,8 +94,8 @@ async function initializeConverter() {
         $fromCurrencySelect.val(toVal).trigger('change');
         $toCurrencySelect.val(fromVal).trigger('change');
     });
-    // --- ▲▲▲ ---
 
+    // --- 초기화 로직 ---
     try {
         const response = await fetch(`${API_URL}/currencies`);
         const currencies = await response.json();
@@ -123,4 +118,4 @@ async function initializeConverter() {
     } catch (error) {
         $resultDiv.text('통화 목록을 불러오는 데 실패했삼');
     }
-}
+});
