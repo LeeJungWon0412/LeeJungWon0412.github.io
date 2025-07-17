@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
             allEmojis = await response.json();
             applyFilters(); // 데이터 로딩 후 필터링 및 렌더링 실행
         } catch (error) {
-            console.error('이모지 로딩에 실패했습니다:', error);
+            console.error('이모지 로딩에 실패했삼:', error);
             emojiGrid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: red;">데이터를 불러오는 데 실패했삼. 파일을 확인해주삼</p>';
         }
     }

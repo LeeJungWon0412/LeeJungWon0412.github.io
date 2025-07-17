@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function handleFile(file) {
         if (!file || !file.type.startsWith('image/')) {
-            alert('이미지 파일만 선택해주세요.');
+            alert('이미지 파일만 선택해주삼');
             return;
         }
         originalFile = file;
