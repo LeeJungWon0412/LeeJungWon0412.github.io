@@ -143,3 +143,27 @@ footer {
         padding: 1.2em;
     }
 }
+
+/* 검색창 디자인 */
+#toolSearchInput {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 2em;
+    border: 2px solid #2c3e50;
+    border-radius: 8px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+}
+
+/* 웹 접근성을 위해 label을 숨기는 클래스 */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}

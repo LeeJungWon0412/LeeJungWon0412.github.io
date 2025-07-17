@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR코드 생성기 - 이정원의 도구 모음집</title>
+    <meta name="description" content="URL 주소나 텍스트를 입력하면 즉시 QR코드 이미지로 변환하고 다운로드할 수 있는 도구입니다.">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="qr.css" />
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>QR코드 생성기</h1>
+        <p>URL 주소나 텍스트를 입력하면 실시간으로 QR코드가 생성되삼</p>
+    </header>
+
+    <main>
+        <div class="qr-container">
+            <textarea id="qrTextInput" placeholder="여기에 QR코드로 만들 주소(URL)나 텍스트를 입력하삼"></textarea>
+            
+            <div class="qrcode-output-wrapper">
+                <canvas id="qrCanvas" width="286" height="286"></canvas>
+                <p id="qrError" class="error-message"></p>
+            </div>
+
+            <a id="downloadLink" class="download-button">QR코드 다운로드</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+        <p>할 말 있으면 mogaattesu@gmail.com으로 메일 주삼</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

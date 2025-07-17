@@ -65,7 +65,7 @@
 #previewCompressed {
     max-width: 100%;
     height: auto;
-    border: 1px solid #e0e0e0;
+    border: 2px solid #2c3e50;
     border-radius: 4px;
     background-color: #f4f7f6;
     min-height: 150px; /* 이미지가 없을 때 최소 높이 */
