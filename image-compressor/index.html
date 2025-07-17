@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사진 압축기 - 이정원의 도구 모음집</title>
+    <meta name="description" content="이미지 품질을 조절하여 파일 크기를 줄여주는 온라인 사진 압축 도구입니다.">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="image.css" />
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>사진 압축기</h1>
+        <p>이미지 품질을 유지하면서 파일 크기를 줄여보삼</p>
+    </header>
+
+    <main>
+        <div class="compressor-container">
+            <div class="upload-area">
+                <label for="imageInput" class="upload-label">
+                    <span>여기를 클릭하거나 파일을 드래그하여 이미지 선택</span>
+                    <input type="file" id="imageInput" accept="image/jpeg, image/png, image/webp">
+                </label>
+            </div>
+            
+            <div id="controlsAndResult" class="controls-and-result">
+                <div class="preview-area">
+                    <div class="image-box">
+                        <h3>원본 이미지</h3>
+                        <img id="previewOriginal" src="" alt="원본 이미지 미리보기">
+                        <p id="sizeBefore"></p>
+                    </div>
+                    <div class="image-box">
+                        <h3>압축된 이미지</h3>
+                        <img id="previewCompressed" src="" alt="압축된 이미지 미리보기">
+                        <p id="sizeAfter"></p>
+                    </div>
+                </div>
+
+                <div class="slider-container">
+                    <label for="qualitySlider">품질 조절 (낮을수록 용량이 작아지삼)</label>
+                    <div class="slider-wrapper">
+                        <span>낮음</span>
+                        <input type="range" id="qualitySlider" min="0" max="1" step="0.01" value="0.7">
+                        <span>높음</span>
+                    </div>
+                    <p>현재 품질: <strong id="qualityValue">0.7</strong></p>
+                </div>
+
+                <a id="downloadLink">압축된 이미지 다운로드</a>
+            </div>
+        </div>
+        <canvas id="processingCanvas" style="display: none;"></canvas>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+        <p>할 말 있으면 mogaattesu@gmail.com으로 메일 주삼</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

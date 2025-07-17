@@ -1,0 +1,130 @@
+.compressor-container {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.upload-area {
+    margin-bottom: 2em;
+}
+
+.upload-label {
+    display: block;
+    padding: 3em 1em;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.upload-label:hover {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+}
+
+.upload-label span {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555;
+}
+
+#imageInput {
+    display: none; /* 실제 input은 숨김 */
+}
+
+/* 이미지 선택 후 나타나는 영역 */
+.controls-and-result {
+    display: none; /* 기본적으로 숨김 */
+}
+
+.preview-area {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+.image-box {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.image-box h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5em;
+}
+
+#previewOriginal,
+#previewCompressed {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: #f4f7f6;
+    min-height: 150px; /* 이미지가 없을 때 최소 높이 */
+}
+
+.image-box p {
+    margin-top: 0.5em;
+    font-weight: bold;
+}
+
+.slider-container {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.slider-container label {
+    display: block;
+    margin-bottom: 1em;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+#qualitySlider {
+    flex-grow: 1;
+    max-width: 400px;
+}
+
+.slider-container p {
+    margin-top: 1em;
+    font-size: 1.1em;
+}
+
+#downloadLink {
+    display: block;
+    width: fit-content;
+    margin: 1em auto;
+    padding: 12px 25px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+#downloadLink:hover {
+    background-color: #9ca3a9;
+}
+
+.upload-label.dragover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
