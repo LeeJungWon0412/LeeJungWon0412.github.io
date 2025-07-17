@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 파일 형식 변환기 - 이정원의 도구 모음집</title>
+    <meta name="description" content="PNG, JPG, WEBP 등 다양한 이미지 파일 형식을 원하는 포맷으로 변환하는 도구입니다.">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="imasty.css" />
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>이미지 파일 형식 변환기</h1>
+        <p>이미지를 원하는 파일 형식으로 변환해보세요.</p>
+    </header>
+
+    <main>
+        <div class="converter-container">
+            <div class="upload-area">
+                <label for="imageInput" class="upload-label">
+                    <span>여기를 클릭하거나 파일을 드래그하여 이미지 선택</span>
+                    <input type="file" id="imageInput" accept="image/*">
+                </label>
+            </div>
+
+            <div id="controlsAndResult" class="controls-and-result">
+                <div class="preview-box">
+                    <h3>미리보기</h3>
+                    <img id="previewImage" src="" alt="선택한 이미지 미리보기">
+                </div>
+
+                <div class="controls-box">
+                    <div class="select-group">
+                        <label for="formatSelect">변환할 형식 선택:</label>
+                        <select id="formatSelect">
+                            <option value="jpeg">JPG</option>
+                            <option value="png">PNG</option>
+                            <option value="webp">WEBP</option>
+                            <option value="gif">GIF</option>
+                            <option value="bmp">BMP</option>
+                        </select>
+                    </div>
+                    <a id="downloadLink" class="download-button">변환 및 다운로드</a>
+                </div>
+            </div>
+        </div>
+        <canvas id="processingCanvas" style="display: none;"></canvas>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+        <p>할 말 있으면 mogaattesu@gmail.com으로 메일 주삼</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

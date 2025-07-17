@@ -1,0 +1,96 @@
+.converter-container {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.upload-label {
+    display: block;
+    padding: 3em 1em;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.upload-label:hover, .upload-label.dragover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.upload-label span {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555;
+}
+
+#imageInput {
+    display: none;
+}
+
+.controls-and-result {
+    display: none; /* 기본적으로 숨김 */
+    margin-top: 2em;
+    text-align: center;
+}
+
+.preview-box {
+    margin-bottom: 2em;
+}
+
+.preview-box h3 {
+    color: #2c3e50;
+    margin-bottom: 1em;
+}
+
+#previewImage {
+    max-width: 100%;
+    max-height: 400px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.controls-box {
+    padding: 1.5em;
+    background-color: #f4f7f6;
+    border-radius: 8px;
+}
+
+.select-group {
+    margin-bottom: 1.5em;
+}
+
+.select-group label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+#formatSelect {
+    padding: 10px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.download-button:hover {
+    background-color: #9ca3a9;
+}
