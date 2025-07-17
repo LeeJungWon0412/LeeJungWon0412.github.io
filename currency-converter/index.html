@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>환율 계산기 - 이정원의 도구 모음집</title>
+    <meta name="description" content="전 세계 통화의 최신 환율을 적용하여 금액을 변환하는 실시간 환율 계산기입니다.">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="currency.css" />
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>환율 계산기</h1>
+        <p>최신 고시 환율 정보를 바탕으로 금액을 변환함</p>
+    </header>
+
+    <main>
+        <div class="converter-container">
+            <div class="converter-wrapper">
+                <div class="input-group">
+                    <label for="amount">금액</label>
+                    <input type="number" id="amount" value="100">
+                </div>
+                <div class="input-group">
+                    <label for="fromCurrency">바꾸기 전 통화</label>
+                    <select id="fromCurrency" class="currency-select"></select>
+                </div>
+                <div class="swap-icon">⇄</div>
+                <div class="input-group">
+                    <label for="toCurrency">바꾼 후 통화</label>
+                    <select id="toCurrency" class="currency-select"></select>
+                </div>
+            </div>
+            <div id="result" class="result-box">
+                환율 정보를 불러오는 중...
+            </div>
+            <div id="rateInfo" class="rate-info"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+        <p>할 말 있으면 mogaattesu@gmail.com으로 메일 주삼</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" defer></script>
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

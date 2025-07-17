@@ -1,0 +1,92 @@
+.converter-container {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.converter-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    min-width: 150px;
+}
+
+.input-group label {
+    font-weight: bold;
+    color: #34495e;
+    font-size: 0.9em;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #2c3e50;
+    border-radius: 8px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+}
+
+/* Select2 라이브러리 디자인 조정 */
+.input-group .select2-container {
+    width: 100% !important;
+}
+
+.select2-container .select2-selection--single {
+    height: 47px;
+    padding: 8px;
+    border: 2px solid #2c3e50;
+    border-radius: 8px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 45px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 29px;
+    font-size: 1.1em;
+}
+
+.select2-dropdown {
+    border: 2px solid #2c3e50;
+    border-radius: 8px;
+}
+
+.swap-icon {
+    font-size: 2em;
+    font-weight: bold;
+    color: #34495e;
+    cursor: pointer;
+    user-select: none;
+}
+
+.result-box {
+    margin-top: 2em;
+    padding: 20px;
+    background-color: #f4f7f6;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.rate-info {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+}
