@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 블롭(Blob) 모양 생성기 - 이정원의 도구 모음집</title>
+    <meta name="description" content="CSS border-radius 속성을 이용해 독특하고 유기적인 블롭(blob) 형태의 도형을 만들고 코드를 생성하는 도구입니다.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="CSS 블롭(Blob) 모양 생성기 - 이정원의 도구 모음집">
+    <meta property="og:description" content="슬라이더를 조절하여 독특한 블롭 모양을 만들고 CSS 코드를 복사하세요.">
+    <meta property="og:image" content="https://leejungwontools.com/og-image.png">
+    <meta property="og:url" content="https://leejungwontools.com/blob-generator/">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="blob.css" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3688642765378814" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>CSS 블롭(Blob) 모양 생성기</h1>
+        <p>슬라이더를 조절하여 독특한 모양을 만들어보삼</p>
+    </header>
+
+    <main>
+        <div id="copyMessage" class="copy-message">복사 완료</div>
+        <div class="generator-wrapper">
+            <div class="preview-container">
+                <div id="blob-preview"></div>
+            </div>
+            <div class="controls-container">
+                <div class="control-row">
+                    <div class="control-group color-group">
+                        <label>그라데이션 색상</label>
+                        <div class="color-inputs">
+                            <input type="color" id="color1" value="#ff7e5f">
+                            <input type="color" id="color2" value="#feb47b">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-row">
+                    <div class="control-group">
+                        <label for="slider1">Top Left</label>
+                        <input type="range" class="radius-slider" id="slider1" min="25" max="75" value="50">
+                    </div>
+                    <div class="control-group">
+                        <label for="slider2">Top Right</label>
+                        <input type="range" class="radius-slider" id="slider2" min="25" max="75" value="50">
+                    </div>
+                </div>
+                <div class="control-row">
+                    <div class="control-group">
+                        <label for="slider4">Bottom Left</label>
+                        <input type="range" class="radius-slider" id="slider4" min="25" max="75" value="50">
+                    </div>
+                    <div class="control-group">
+                        <label for="slider3">Bottom Right</label>
+                        <input type="range" class="radius-slider" id="slider3" min="25" max="75" value="50">
+                    </div>
+                </div>
+                <div class="code-area">
+                    <code id="result-code"></code>
+                    <button id="copy-btn">코드 복사</button>
+                </div>
+            </div>
+        </div>
+        
+        <section class="about-section">
+            <details>
+                <summary>
+                    <h2>📖 블롭 모양 생성기 설명 및 정보 보기 <span class="summary-icon">▼</span></h2>
+                </summary>
+                <p class="about-description">
+                    이 도구는 CSS의 <strong class="highlight">`border-radius`</strong> 속성을 복합적으로 사용하여 정형화되지 않은 부드러운 형태, 일명 <strong class="highlight">블롭(Blob)을 생성</strong>함.
+                </p>
+                <p class="about-description">
+                    네 개의 슬라이더는 각각 <strong class="highlight">도형의 네 꼭짓점의 둥근 정도를 조절</strong>함.
+                </p>
+                <p class="about-description">
+                    값을 조합하여 <strong class="highlight">독창적인 모양</strong>을 만들고, 생성된 코드를 <strong class="highlight">복사</strong>하여 웹사이트의 배경, 프로필 이미지, 디자인 요소 등으로 <strong class="highlight">활용</strong>해보삼.
+                </p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+        <p>할 말 있으면 mogaattesu@gmail.com으로 메일 주삼</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
