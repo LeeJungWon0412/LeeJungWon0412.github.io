@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 필터 효과 생성기 - 이정원의 도구 모음집</title>
+    <meta name="description" content="이미지에 밝기, 대비, 채도, 흑백, 블러 등 다양한 CSS 필터 효과를 적용하고 코드를 생성하는 도구입니다.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="CSS 필터 효과 생성기 - 이정원의 도구 모음집">
+    <meta property="og:description" content="슬라이더를 조절하여 이미지에 다양한 필터 효과를 적용하고 CSS 코드를 복사하세요.">
+    <meta property="og:image" content="https://leejungwontools.com/og-image.png">
+    <meta property="og:url" content="https://leejungwontools.com/css-filter-generator/">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="filter.css" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3688642765378814" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>CSS 필터 효과 생성기</h1>
+        <p>슬라이더를 조절하여 원하는 이미지 효과를 만드삼</p>
+    </header>
+
+    <main>
+        <div id="copyMessage" class="copy-message">복사 완료</div>
+        <div class="generator-wrapper">
+            <div class="preview-container">
+                <img id="preview-image" src="https://cdn.pixabay.com/photo/2018/07/12/11/36/white-pekin-duck-3533144_1280.jpg" alt="필터 효과 미리보기 이미지">
+                <div class="code-area">
+                    <code id="result-code"></code>
+                    <button id="copy-btn">코드 복사</button>
+                </div>
+            </div>
+            <div class="controls-container">
+                <div class="control-group">
+                    <label for="brightness">밝기 (Brightness)</label>
+                    <input type="range" class="filter-slider" id="brightness" min="0" max="200" value="100" data-unit="%">
+                </div>
+                <div class="control-group">
+                    <label for="contrast">대비 (Contrast)</label>
+                    <input type="range" class="filter-slider" id="contrast" min="0" max="200" value="100" data-unit="%">
+                </div>
+                <div class="control-group">
+                    <label for="saturate">채도 (Saturate)</label>
+                    <input type="range" class="filter-slider" id="saturate" min="0" max="200" value="100" data-unit="%">
+                </div>
+                <div class="control-group">
+                    <label for="grayscale">흑백 (Grayscale)</label>
+                    <input type="range" class="filter-slider" id="grayscale" min="0" max="100" value="0" data-unit="%">
+                </div>
+                 <div class="control-group">
+                    <label for="sepia">세피아 (Sepia)</label>
+                    <input type="range" class="filter-slider" id="sepia" min="0" max="100" value="0" data-unit="%">
+                </div>
+                <div class="control-group">
+                    <label for="hue-rotate">색상 회전 (Hue Rotate)</label>
+                    <input type="range" class="filter-slider" id="hue-rotate" min="0" max="360" value="0" data-unit="deg">
+                </div>
+                <div class="control-group">
+                    <label for="blur">흐림 (Blur)</label>
+                    <input type="range" class="filter-slider" id="blur" min="0" max="20" value="0" data-unit="px">
+                </div>
+                <button id="reset-btn">초기화</button>
+            </div>
+        </div>
+        
+        <section class="about-section">
+            <details>
+                <summary>
+                    <h2>📖 CSS 필터 생성기 설명 및 정보 보기 <span class="summary-icon">▼</span></h2>
+                </summary>
+                <p class="about-description">
+                    이 도구는 CSS의 <strong class="highlight">`filter`</strong> 속성을 사용하여 이미지에 다양한 <strong class="highlight">시각적 효과</strong>를 적용함.
+                </p>
+                <p class="about-description">
+                    포토샵 없이도 웹에서 직접 이미지의 느낌을 바꿀 수 있삼.
+                </p>
+                <p class="about-description">
+                    각 슬라이더를 조절하여 <strong class="highlight">밝기, 대비, 채도, 흑백, 블러 등 여러 효과를 조합</strong>하고, 생성된 코드를 <strong class="highlight">복사</strong>하여 자신의 프로젝트에 <strong class="highlight">활용</strong>해보삼.
+                </p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+        <p>할 말 있으면 mogaattesu@gmail.com으로 메일 주삼</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
