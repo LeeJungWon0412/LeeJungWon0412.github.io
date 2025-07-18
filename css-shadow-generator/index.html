@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 그림자 생성기 - 이정원의 도구 모음집</title>
+    <meta name="description" content="직관적인 컨트롤러를 사용하여 box-shadow CSS 코드를 시각적으로 만들고 복사할 수 있는 도구입니다.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="CSS 그림자 생성기 - 이정원의 도구 모음집">
+    <meta property="og:description" content="box-shadow CSS 코드를 시각적으로 만들고 바로 복사해서 사용해보세요.">
+    <meta property="og:image" content="https://leejungwontools.com/og-image.png">
+    <meta property="og:url" content="https://leejungwontools.com/css-shadow-generator/">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="shadow.css" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3688642765378814" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>CSS 그림자 생성기</h1>
+        <p>슬라이더를 조절하여 원하는 그림자를 만들고 코드를 복사하삼</p>
+    </header>
+
+    <main>
+        <div id="copyMessage" class="copy-message">복사 완료</div>
+        
+        <div class="generator-wrapper">
+            <div class="controls-container">
+                <div class="control-group">
+                    <label for="offset-x">가로 위치 (Offset X)</label>
+                    <input type="range" id="offset-x" min="-50" max="50" value="10">
+                    <span class="value-display">10px</span>
+                </div>
+                <div class="control-group">
+                    <label for="offset-y">세로 위치 (Offset Y)</label>
+                    <input type="range" id="offset-y" min="-50" max="50" value="10">
+                    <span class="value-display">10px</span>
+                </div>
+                <div class="control-group">
+                    <label for="blur-radius">흐림 반경 (Blur Radius)</label>
+                    <input type="range" id="blur-radius" min="0" max="100" value="5">
+                    <span class="value-display">5px</span>
+                </div>
+                <div class="control-group">
+                    <label for="spread-radius">확산 반경 (Spread Radius)</label>
+                    <input type="range" id="spread-radius" min="-50" max="50" value="0">
+                    <span class="value-display">0px</span>
+                </div>
+                <div class="control-group">
+                    <label for="shadow-color">그림자 색상</label>
+                    <input type="color" id="shadow-color" value="#000000">
+                    <span class="value-display">#000000</span>
+                </div>
+                <div class="control-group">
+                    <label for="shadow-opacity">그림자 투명도</label>
+                    <input type="range" id="shadow-opacity" min="0" max="1" step="0.01" value="0.75">
+                    <span class="value-display">0.75</span>
+                </div>
+                <div class="control-group">
+                    <label for="inset-shadow">내부 그림자 (Inset)</label>
+                    <input type="checkbox" id="inset-shadow">
+                </div>
+            </div>
+
+            <div class="preview-container">
+                <div id="preview-box"></div>
+                <div class="code-container">
+                    <code id="result-code">box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);</code>
+                    <button id="copy-btn">코드 복사</button>
+                </div>
+            </div>
+        </div>
+        
+        <section class="about-section">
+            <details>
+                <summary>
+                    <h2>📖 CSS 그림자 생성기 설명 및 정보 보기 <span class="summary-icon">▼</span></h2>
+                </summary>
+                <p class="about-description">
+                    이 도구는 웹 디자인의 핵심 요소 중 하나인 <strong class="highlight">`box-shadow`</strong> 속성을 시각적으로 쉽게 만들 수 있도록 도와줌.
+                </p>
+                <p class="about-description">
+                    각 슬라이더와 컨트롤을 조작하여 <strong class="highlight">그림자의 위치, 크기, 색상</strong> 등을 실시간으로 확인하고, 생성된 CSS 코드를 바로 <strong class="highlight">복사</strong>하여 자신의 프로젝트에 <strong class="highlight">적용</strong>할 수 있삼.
+                </p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+        <p>할 말 있으면 mogaattesu@gmail.com으로 메일 주삼</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
