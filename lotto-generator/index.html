@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로또 번호 생성기 - 이정원의 도구 모음집</title>
+    <meta name="description" content="1부터 45까지의 숫자 중 6개의 당첨 번호와 1개의 보너스 번호를 무작위로 생성해주는 도구입니다.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="로또 번호 생성기 - 이정원의 도구 모음집">
+    <meta property="og:description" content="버튼 하나로 간편하게 로또 행운 번호 6자리와 보너스 번호 1자리를 생성해보세요.">
+    <meta property="og:image" content="https://leejungwontools.com/og-image.png">
+    <meta property="og:url" content="https://leejungwontools.com/lotto-generator/">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="lotto.css" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3688642765378814" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>로또 번호 생성기</h1>
+        <p>행운의 번호와 보너스 번호를 생성해보삼</p>
+    </header>
+
+    <main>
+        <div class="generator-container">
+            <div class="result-container">
+                <div id="winning-numbers" class="lotto-numbers-container">
+                    <span class="label">당첨번호</span>
+                </div>
+                <span class="plus-sign">+</span>
+                <div id="bonus-number-container" class="bonus-number-container">
+                    <span class="label">보너스</span>
+                </div>
+            </div>
+            <button id="generateBtn">번호 생성하기</button>
+        </div>
+
+        <section class="about-section">
+            <details>
+                <summary>
+                    <h2>📖 로또 번호 생성기 설명 및 정보 보기 <span class="summary-icon">▼</span></h2>
+                </summary>
+                <p class="about-description">
+                    이 도구는 <strong class="highlight">1부터 45까지의 숫자</strong> 중에서, 서로 겹치지 않는 <strong class="highlight">6개의 당첨 번호</strong>와 <strong class="highlight">1개의 보너스 번호</strong>를 무작위로 뽑아줌.
+                </p>
+                <p class="about-description">
+                    생성된 당첨 번호는 보기 편하도록 <strong class="highlight">오름차순으로 자동 정렬</strong>됨.
+                </p>
+                <p class="about-description">
+                    보너스 번호는 당첨 번호와 <strong class="highlight">겹치지 않도록 생성</strong>됨.
+                </p>
+                <p class="about-description">
+                    '번호 생성하기' 버튼을 누를 때마다 <strong class="highlight">새로운 행운의 번호 조합</strong>을 확인할 수 있삼.
+                </p>
+                <p class="about-description">
+                    <strong class="highlight">당첨되면 나도 좀 나눠주삼.</strong>
+                </p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+        <p>할 말 있으면 mogaattesu@gmail.com으로 메일 주삼</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
