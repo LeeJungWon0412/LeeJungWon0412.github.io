@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>유리 재질(Glassmorphism) 카드 생성기 - 이정원의 도구 모음집</title>
+    <meta name="description" content="블러, 투명도 등을 조절하여 세련된 유리 질감(Glassmorphism) 스타일의 UI 카드 CSS 코드를 생성하는 도구입니다.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="유리 재질(Glassmorphism) 카드 생성기 - 이정원의 도구 모음집">
+    <meta property="og:description" content="최신 웹 디자인 트렌드인 유리 질감 효과를 직접 만들고 코드를 복사하세요.">
+    <meta property="og:image" content="https://leejungwontools.com/og-image.png">
+    <meta property="og:url" content="https://leejungwontools.com/glassmorphism-generator/">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="glass.css" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3688642765378814" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>유리 재질(Glassmorphism) 카드 생성기</h1>
+        <p>슬라이더를 조절하여 유리 질감 효과를 만드삼</p>
+    </header>
+
+    <main>
+        <div id="copyMessage" class="copy-message">복사 완료</div>
+        <div class="generator-wrapper">
+            <div class="preview-container">
+                <div id="glass-card">
+                </div>
+            </div>
+            <div class="controls-container">
+                <div class="control-group">
+                    <label for="blur">블러 (Blur)</label>
+                    <input type="range" id="blur" min="0" max="40" value="10">
+                </div>
+                <div class="control-group">
+                    <label for="transparency">투명도 (Transparency)</label>
+                    <input type="range" id="transparency" min="0" max="1" step="0.05" value="0.2">
+                </div>
+                <div class="control-group">
+                    <label for="color">색상 (Color)</label>
+                    <input type="color" id="color" value="#ffffff">
+                </div>
+                <div class="code-area">
+                    <pre><code id="result-code"></code></pre>
+                    <button id="copy-btn">코드 복사</button>
+                </div>
+            </div>
+        </div>
+        
+        <section class="about-section">
+            <details>
+                <summary>
+                    <h2>📖 유리 재질 생성기 설명 및 정보 보기 <span class="summary-icon">▼</span></h2>
+                </summary>
+                <p class="about-description">
+                    이 도구는 CSS의 <strong class="highlight">`backdrop-filter`</strong> 속성을 활용하여 <strong class="highlight">반투명한 유리(또는 아크릴) 재질의 느낌을 내는 '글래스모피즘(Glassmorphism)' 효과</strong>를 생성함.
+                </p>
+                <p class="about-description">
+                    슬라이더와 색상 선택기를 이용해 배경의 <strong class="highlight">흐림 정도와 투명도</strong>를 조절하고, 생성된 코드를 <strong class="highlight">복사</strong>하여 웹사이트의 카드 UI나 배경 요소에 <strong class="highlight">적용</strong>해보삼.
+                </p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+        <p>할 말 있으면 mogaattesu@gmail.com으로 메일 주삼</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
