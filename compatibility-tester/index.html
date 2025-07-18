@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale-1.0" />
+    <title>종합 궁합 테스트 - 이정원의 도구 모음집</title>
+    <meta name="description" content="이름, MBTI, 별자리, 혈액형으로 재미있는 궁합을 테스트해보세요.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="종합 궁합 테스트 - 이정원의 도구 모음집">
+    <meta property="og:description" content="이름, MBTI, 별자리, 혈액형으로 재미있는 궁합을 테스트해보세요.">
+    <meta property="og:image" content="https://leejungwontools.com/og-image.png">
+    <meta property="og:url" content="https://leejungwontools.com/compatibility-tester/">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="compa.css" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3688642765378814" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>종합 궁합 테스트</h1>
+        <p>다양한 방법으로 궁합을 확인해보삼</p>
+    </header>
+
+    <main>
+        <div class="tester-container">
+            <div class="tab-menu">
+                <button class="tab-btn active" data-tab="name">이름</button>
+                <button class="tab-btn" data-tab="mbti">MBTI</button>
+                <button class="tab-btn" data-tab="zodiac">별자리</button>
+                <button class="tab-btn" data-tab="blood">혈액형</button>
+            </div>
+
+            <div id="name" class="tab-content active">
+                <div class="input-area">
+                    <input type="text" id="name1" placeholder="이름">
+                    <input type="text" id="name2" placeholder="이름">
+                </div>
+                <button class="calculate-btn" data-type="name">궁합 보기</button>
+                <div id="nameResult" class="result-box"></div>
+            </div>
+            <div id="mbti" class="tab-content">
+                </div>
+            <div id="zodiac" class="tab-content">
+                </div>
+            <div id="blood" class="tab-content">
+                </div>
+        </div>
+
+        <section class="about-section">
+            <details>
+                <summary>
+                    <h2>📖 종합 궁합 테스트 설명 및 정보 보기 <span class="summary-icon">▼</span></h2>
+                </summary>
+                <p class="about-description">
+                    이 도구는 재미로 보는 궁합 테스트임.
+                </p>
+                <p class="about-description">
+                    <strong class="highlight">이름 획수, MBTI 관계 유형, 별자리, 혈액형</strong> 등 대중적으로 알려진 궁합 풀이를 기반으로 결과를 보여줌.
+                </p>
+                <p class="about-description">
+                    결과는 과학적인 근거가 없으므로 <strong class="highlight">가볍게</strong> 즐겨주시기 바람.
+                </p>
+                <p class="about-description">
+                    친구나 연인과 함께 <strong class="highlight">재미있는 시간</strong>을 보내는 데 사용해보삼.
+                </p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+        <p>할 말 있으면 mogaattesu@gmail.com으로 메일 주삼</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
