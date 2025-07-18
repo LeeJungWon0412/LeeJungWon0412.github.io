@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 그라데이션 생성기 - 이정원의 도구 모음집</title>
+    <meta name="description" content="선형(Linear), 방사형(Radial) 그라데이션 배경 CSS 코드를 시각적으로 만들고 복사할 수 있는 도구입니다.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="CSS 그라데이션 생성기 - 이정원의 도구 모음집">
+    <meta property="og:description" content="원하는 색상과 각도를 선택하여 아름다운 그라데이션 배경 코드를 만들어보세요.">
+    <meta property="og:image" content="https://leejungwontools.com/og-image.png">
+    <meta property="og:url" content="https://leejungwontools.com/css-gradient-generator/">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="gradi.css" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3688642765378814" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>CSS 그라데이션 생성기</h1>
+        <p>원하는 색상과 각도를 선택하여 배경 코드를 만드삼</p>
+    </header>
+
+    <main>
+        <div id="copyMessage" class="copy-message">복사 완료</div>
+        <div class="generator-container">
+            <div class="controls-area">
+                <div class="control-group">
+                    <label>색상</label>
+                    <div class="color-inputs">
+                        <input type="color" id="color1" value="#ff7e5f">
+                        <input type="color" id="color2" value="#feb47b">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="angle">각도</label>
+                    <input type="range" id="angle" min="0" max="360" value="90">
+                    <span id="angle-value">90deg</span>
+                </div>
+                <div class="control-group">
+                    <label>종류</label>
+                    <div class="radio-group">
+                        <input type="radio" id="linear" name="gradient-type" value="linear" checked>
+                        <label for="linear">선형 (Linear)</label>
+                        <input type="radio" id="radial" name="gradient-type" value="radial">
+                        <label for="radial">방사형 (Radial)</label>
+                    </div>
+                </div>
+            </div>
+            <div id="preview" class="preview-area"></div>
+            <div class="code-area">
+                <code id="result-code"></code>
+                <button id="copy-btn">코드 복사</button>
+            </div>
+        </div>
+
+        <section class="about-section">
+            <details>
+                <summary>
+                    <h2>📖 CSS 그라데이션 생성기 설명 및 정보 보기 <span class="summary-icon">▼</span></h2>
+                </summary>
+                <p class="about-description">
+                    이 도구는 <strong class="highlight">두 가지 색상을 부드럽게 혼합</strong>하여 아름다운 배경을 만드는 <strong class="highlight">CSS 그라데이션</strong> 코드를 생성함.
+                </p>
+                <p class="about-description">
+                    <strong class="highlight">색상, 각도, 종류(선형/방사형)</strong>를 선택하면 실시간으로 미리보기가 변경되며, 생성된 코드를 <strong class="highlight">복사</strong>하여 웹사이트 배경이나 디자인 요소로 바로 <strong class="highlight">활용</strong>할 수 있삼.
+                </p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+        <p>할 말 있으면 mogaattesu@gmail.com으로 메일 주삼</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
