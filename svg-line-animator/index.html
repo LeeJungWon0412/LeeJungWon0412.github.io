@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG 라인 애니메이션 생성기 - 이정원의 도구 모음집</title>
+    <meta name="description" content="SVG 아이콘이나 로고 코드를 붙여넣으면 선이 따라 그려지는 라인 드로잉 애니메이션 CSS 코드를 생성합니다.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="SVG 라인 애니메이션 생성기 - 이정원의 도구 모음집">
+    <meta property="og:description" content="SVG 코드를 붙여넣기만 하면 선이 그려지는 멋진 애니메이션을 만들 수 있습니다.">
+    <meta property="og:image" content="https://leejungwontools.com/og-image.png">
+    <meta property="og:url" content="https://leejungwontools.com/svg-line-animator/">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="svg.css" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3688642765378814" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>SVG 라인 애니메이션 생성기</h1>
+        <p>SVG 코드를 붙여넣어 라인 드로잉 애니메이션을 만드삼</p>
+    </header>
+
+    <main>
+        <div id="copyMessage" class="copy-message">복사 완료</div>
+        <div class="generator-wrapper">
+            <div class="input-container">
+                <h3>1. SVG 코드 붙여넣기</h3>
+                <textarea id="svg-input" placeholder="여기에 <svg>...</svg> 코드를 붙여넣으삼"></textarea>
+                <button id="generate-btn">애니메이션 생성</button>
+            </div>
+            <div class="preview-container">
+                <h3>2. 미리보기</h3>
+                <div id="preview-box">
+                    <p class="placeholder">SVG 코드를 입력하고<br>'애니메이션 생성'을 누르삼</p>
+                </div>
+            </div>
+            <div class="output-container">
+                <h3>3. 결과 코드</h3>
+                <div class="code-box">
+                    <h4>CSS</h4>
+                    <pre><code id="css-result">/* 생성된 코드가 여기에 표시되삼 */</code></pre>
+                </div>
+                <button id="copy-btn">CSS 코드 복사</button>
+            </div>
+        </div>
+        
+        <section class="about-section">
+            <details>
+                <summary>
+                    <h2>📖 SVG 라인 애니메이션 설명 보기 <span class="summary-icon">▼</span></h2>
+                </summary>
+                <p class="about-description">
+                    이 도구는 SVG(Scalable Vector Graphics)의 <strong class="highlight">`stroke-dasharray`</strong>와 <strong class="highlight">`stroke-dashoffset`</strong> 속성을 이용해 선이 따라 그려지는 듯한 <strong class="highlight">애니메이션 효과</strong>를 만듦.
+                </p>
+                <p class="about-description">
+                    아이콘 라이브러리 등에서 받은 <strong class="highlight">SVG 코드</strong>를 붙여넣고 '애니메이션 생성' 버튼을 누르삼.
+                </p>
+                <p class="about-description">
+                    생성된 CSS 코드를 <strong class="highlight">복사</strong>하여 자신의 SVG 코드와 함께 <strong class="highlight">사용</strong>하면 됨.
+                </p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+        <p>할 말 있으면 mogaattesu@gmail.com으로 메일 주삼</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
