@@ -75,12 +75,6 @@ main {
     text-align: center;
 }
 
-/* 광고 구간 */
-.ad-section {
-    margin: 2.5em 0;
-    text-align: center;
-}
-
 /* 푸터 */
 footer {
     text-align: center;
@@ -166,4 +160,65 @@ footer {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+}
+
+/* '이게 뭐에요?' 섹션 스타일 (기존 스타일 유지, details/summary에 맞게 약간 조정) */
+.about-section {
+    background-color: #f4f7f6; /* 배경색 유지 */
+    padding: 20px 30px; /* 패딩 조정 */
+    margin-bottom: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* details 태그의 기본 여백 제거 및 커서 변경 */
+details {
+    margin: 0;
+    padding: 0;
+}
+
+/* summary 태그 (클릭 가능한 제목 부분) 스타일 */
+summary {
+    display: flex; /* 아이콘과 제목 정렬을 위해 flex 사용 */
+    align-items: center;
+    justify-content: center; /* 중앙 정렬 */
+    cursor: pointer; /* 클릭 가능하게 커서 변경 */
+    outline: none; /* 클릭 시 생기는 파란색 윤곽선 제거 */
+    padding: 10px 0; /* 위아래 패딩 */
+}
+
+summary h2 {
+    margin: 0; /* h2의 기본 마진 제거 */
+    color: #2c3e50; /* h2 색상 유지 */
+    font-size: 1.8em; /* h2 폰트 사이즈 유지 */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 제목과 아이콘 사이 간격 */
+}
+
+/* summary 아이콘 스타일 */
+.summary-icon {
+    font-size: 0.8em; /* 아이콘 크기 조정 */
+    transition: transform 0.2s ease; /* 회전 애니메이션 */
+}
+
+/* details가 열렸을 때 아이콘 회전 */
+details[open] .summary-icon {
+    transform: rotate(180deg); /* 열리면 180도 회전 */
+}
+
+/* 내용 텍스트 스타일 (기존 about-description 유지) */
+.about-section .about-description {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #2c3e50;
+    max-width: 800px;
+    margin: 10px auto; /* 위아래 여백 추가 */
+    text-align: left; /* 설명 텍스트 좌측 정렬 */
+}
+
+.about-section .highlight {
+    font-weight: bold;
+    color: #2c3e50;
 }
