@@ -123,22 +123,3 @@ $(document).ready(async function () {
         $resultDiv.text('통화 목록을 불러오는 데 실패했삼');
     }
 });
-
-// 설명 펼치기/접기 기능
-const toggleBtn = document.getElementById('toggleDescriptionBtn');
-const descriptionContent = document.getElementById('descriptionContent');
-
-// 해당 요소들이 페이지에 존재할 때만 이벤트 리스너를 추가
-if (toggleBtn && descriptionContent) {
-    toggleBtn.addEventListener('click', () => {
-        // 'hidden' 클래스를 넣었다 뺐다 하면서 내용을 보이거나 숨김
-        const isHidden = descriptionContent.classList.toggle('hidden');
-        
-        // 버튼의 텍스트와 화살표 방향을 바꿈
-        if (isHidden) {
-            toggleBtn.innerHTML = '📖 환율 계산기 설명 및 정보 보기 ▼';
-        } else {
-            toggleBtn.innerHTML = '📖 환율 계산기 설명 및 정보 숨기기 ▲';
-        }
-    });
-}

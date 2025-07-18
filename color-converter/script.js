@@ -118,19 +118,3 @@ document.addEventListener('DOMContentLoaded', () => {
         return { r: Math.round(r * 255), g: Math.round(g * 255), b: Math.round(b * 255) };
     }
 });
-
-// 설명 펼치기/접기 기능
-const toggleBtn = document.getElementById('toggleDescriptionBtn');
-const descriptionContent = document.getElementById('descriptionContent');
-
-if (toggleBtn && descriptionContent) {
-    toggleBtn.addEventListener('click', () => {
-        const isHidden = descriptionContent.classList.toggle('hidden');
-        
-        if (isHidden) {
-            toggleBtn.innerHTML = '📖 색상 코드 변환기 설명 및 정보 보기 ▼';
-        } else {
-            toggleBtn.innerHTML = '📖 색상 코드 변환기 설명 및 정보 숨기기 ▲';
-        }
-    });
-}

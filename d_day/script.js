@@ -72,19 +72,3 @@ document.addEventListener('DOMContentLoaded', () => {
     calculateDday();
     calculateDateDifference();
 });
-
-// 설명 펼치기/접기 기능
-const toggleBtn = document.getElementById('toggleDescriptionBtn');
-const descriptionContent = document.getElementById('descriptionContent');
-
-if (toggleBtn && descriptionContent) {
-    toggleBtn.addEventListener('click', () => {
-        const isHidden = descriptionContent.classList.toggle('hidden');
-        
-        if (isHidden) {
-            toggleBtn.innerHTML = '📖 날짜 계산기 설명 및 정보 보기 ▼';
-        } else {
-            toggleBtn.innerHTML = '📖 날짜 계산기 설명 및 정보 숨기기 ▲';
-        }
-    });
-}
