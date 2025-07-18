@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>대출 이자 계산기 - 이정원의 도구 모음집</title>
+    <meta name="description" content="원리금 균등분할상환 방식의 대출에 대한 월 상환금, 총 이자, 총 상환액을 계산합니다.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="대출 이자 계산기 - 이정원의 도구 모음집">
+    <meta property="og:description" content="원리금 균등분할상환 방식의 월 상환금을 간편하게 계산해보세요.">
+    <meta property="og:image" content="https://leejungwontools.com/og-image.png">
+    <meta property="og:url" content="https://leejungwontools.com/loan-calculator/">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="loan.css" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3688642765378814" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>대출 이자 계산기</h1>
+        <p>원리금 균등분할상환 방식의 월 상환금을 계산해보삼</p>
+    </header>
+
+    <main>
+        <div class="calculator-container">
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="principal">대출 원금 (원)</label>
+                    <input type="number" id="principal" placeholder="예: 100000000" value="100000000">
+                </div>
+                <div class="input-group">
+                    <label for="interestRate">연 이자율 (%)</label>
+                    <input type="number" id="interestRate" placeholder="예: 5" step="0.1" value="5">
+                </div>
+                <div class="input-group">
+                    <label for="loanTerm">대출 기간 (년)</label>
+                    <input type="number" id="loanTerm" placeholder="예: 30" value="30">
+                </div>
+            </div>
+            <button id="calculateBtn">계산하기</button>
+
+            <div id="result" class="result-area">
+                <div class="result-item">
+                    <span>월 상환금</span>
+                    <strong id="monthlyPayment">0 원</strong>
+                </div>
+                <div class="result-item">
+                    <span>총 이자</span>
+                    <strong id="totalInterest">0 원</strong>
+                </div>
+                <div class="result-item">
+                    <span>총 상환금액</span>
+                    <strong id="totalPayment">0 원</strong>
+                </div>
+            </div>
+        </div>
+
+        <section class="about-section">
+        <details>
+            <summary>
+                <h2>📖 대출 이자 계산기 설명 및 정보 보기 <span class="summary-icon">▼</span></h2>
+            </summary>
+            <p class="about-description">
+                이 도구는 가장 일반적인 상환 방식인 <strong class="highlight">원리금 균등분할상환</strong>을 기준으로, 매달 납부해야 할 금액을 계산해 줌.
+            </p>
+            <p class="about-description">
+                대출 원금, 연 이자율, 대출 기간(년)을 입력하고 '계산하기' 버튼을 누르면 <strong class="highlight">월 상환금, 총 이자, 총상환금액</strong>을 한눈에 확인할 수 있삼.
+            </p>
+            <p class="about-description">
+                주택담보대출, 신용대출 등 금융 계획을 세울 때 참고용으로 활용해보삼.
+            </p>
+        </details>
+    </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+        <p>할 말 있으면 mogaattesu@gmail.com으로 메일 주삼</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
