@@ -80,3 +80,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // 형식을 변경할 때마다 다운로드 링크를 미리 업데이트
     formatSelect.addEventListener('change', updateDownloadLink);
 });
+
+// 설명 펼치기/접기 기능
+const toggleBtn = document.getElementById('toggleDescriptionBtn');
+const descriptionContent = document.getElementById('descriptionContent');
+
+if (toggleBtn && descriptionContent) {
+    toggleBtn.addEventListener('click', () => {
+        const isHidden = descriptionContent.classList.toggle('hidden');
+        
+        if (isHidden) {
+            toggleBtn.innerHTML = '📖 이미지 파일 형식 변환기 설명 및 정보 보기 ▼';
+        } else {
+            toggleBtn.innerHTML = '📖 이미지 파일 형식 변환기 설명 및 정보 숨기기 ▲';
+        }
+    });
+}

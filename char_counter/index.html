@@ -60,6 +60,23 @@
             </div>
             <button id="clearButton">모두 지우기</button>
         </div>
+
+        <div class="description-wrapper">
+            <button id="toggleDescriptionBtn" class="toggle-description-btn">📖 글자 수 세기 설명 및 정보 보기 ▼</button>
+            <section id="descriptionContent" class="description-section hidden">
+                <h2>글자 수 세기 도구 정보</h2>
+                <p>
+                    이 도구는 입력된 텍스트의 글자 수를 실시간으로 계산해 줌. 자기소개서, 이력서, 리포트 등 글자 수 제한이 있는 문서를 작성할 때 유용하게 사용할 수 있삼.
+                </p>
+                <h3>각 항목 설명</h3>
+                <ul>
+                    <li><strong>공백 포함:</strong> 띄어쓰기, 줄 바꿈 등 모든 문자를 포함한 전체 글자 수임.</li>
+                    <li><strong>공백 제외:</strong> 띄어쓰기, 줄 바꿈 등을 제외한 순수 텍스트의 글자 수임.</li>
+                    <li><strong>단어 수:</strong> 띄어쓰기를 기준으로 나뉜 단어의 개수임.</li>
+                    <li><strong>줄 수:</strong> 엔터(Enter)로 구분된 줄의 개수임.</li>
+                </ul>
+            </section>
+        </div>
     </main>
 
     <footer>

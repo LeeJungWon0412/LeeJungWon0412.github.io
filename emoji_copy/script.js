@@ -84,3 +84,19 @@ document.addEventListener('DOMContentLoaded', function () {
     // --- 초기 실행 ---
     loadEmojis(); // 페이지가 로드되면 이모지 데이터 불러오기 시작
 });
+
+// 설명 펼치기/접기 기능
+const toggleBtn = document.getElementById('toggleDescriptionBtn');
+const descriptionContent = document.getElementById('descriptionContent');
+
+if (toggleBtn && descriptionContent) {
+    toggleBtn.addEventListener('click', () => {
+        const isHidden = descriptionContent.classList.toggle('hidden');
+        
+        if (isHidden) {
+            toggleBtn.innerHTML = '📖 이모지/특수문자 복사 도구 설명 및 정보 보기 ▼';
+        } else {
+            toggleBtn.innerHTML = '📖 이모지/특수문자 복사 도구 설명 및 정보 숨기기 ▲';
+        }
+    });
+}
