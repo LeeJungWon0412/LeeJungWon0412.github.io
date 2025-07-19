@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 3D 큐브 생성기 - 이정원의 도구 모음집</title>
+    <meta name="description" content="마우스를 올리면 회전하는 인터랙티브한 3D 큐브 CSS 코드를 생성하는 도구입니다.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="CSS 3D 큐브 생성기 - 이정원의 도구 모음집">
+    <meta property="og:description" content="CSS 3D transform 속성을 이용해 멋진 3D 큐브를 만들고 코드를 복사하세요.">
+    <meta property="og:image" content="https://leejungwontools.com/og-image.png">
+    <meta property="og:url" content="https://leejungwontools.com/css-3d-cube-generator/">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="3d.css" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3688642765378814" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>CSS 3D 큐브 생성기</h1>
+        <p>마우스를 올리면 회전하는 3D 큐브를 만들어보삼</p>
+    </header>
+
+    <main>
+        <div id="copyMessage" class="copy-message">복사 완료</div>
+        <div class="generator-wrapper">
+            <div class="preview-container">
+                <div class="scene">
+                    <div class="cube" id="cube">
+                        <div class="face front">1</div>
+                        <div class="face back">6</div>
+                        <div class="face right">2</div>
+                        <div class="face left">5</div>
+                        <div class="face top">3</div>
+                        <div class="face bottom">4</div>
+                    </div>
+                </div>
+            </div>
+            <div class="controls-container">
+                <div class="control-group">
+                    <label for="rotateX">X축 회전 (가로)</label>
+                    <input type="range" class="slider" id="rotateX" min="-180" max="180" value="-20">
+                </div>
+                <div class="control-group">
+                    <label for="rotateY">Y축 회전 (세로)</label>
+                    <input type="range" class="slider" id="rotateY" min="-180" max="180" value="-30">
+                </div>
+                <div class="code-area">
+                    <pre><code id="result-code"></code></pre>
+                    <button id="copy-btn">CSS 코드 복사</button>
+                </div>
+            </div>
+        </div>
+        
+        <section class="about-section">
+            <details>
+                <summary>
+                    <h2>📖 3D 큐브 생성기 설명 및 정보 보기 <span class="summary-icon">▼</span></h2>
+                </summary>
+                <p class="about-description">
+                    이 도구는 CSS의 <strong class="highlight">`perspective`</strong>와 <strong class="highlight">`transform`</strong> 속성을 활용하여 웹 페이지에 입체적인 3D 정육면체를 만듦.
+                </p>
+                <p class="about-description">
+                    슬라이더를 조절하여 큐브가 회전하는 각도를 실시간으로 확인하고, 생성된 CSS 코드를 <strong class="highlight">복사</strong>하여 인터랙티브한 UI 요소로 <strong class="highlight">활용</strong>해보삼.
+                </p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+        <p>할 말 있으면 mogaattesu@gmail.com으로 메일 주삼</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
