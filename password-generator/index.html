@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비밀번호 생성기 - 이정원의 도구 모음집</title>
+    <meta name="description" content="길이와 포함할 문자 종류(대문자, 소문자, 숫자, 특수문자)를 선택하여 안전하고 강력한 랜덤 비밀번호를 생성하는 도구입니다.">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="비밀번호 생성기 - 이정원의 도구 모음집">
+    <meta property="og:description" content="안전하고 강력한 랜덤 비밀번호를 간편하게 생성하고 복사하세요.">
+    <meta property="og:image" content="https://leejungwontools.com/og-image.png">
+    <meta property="og:url" content="https://leejungwontools.com/password-generator/">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="pass.css" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3688642765378814" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="/" class="home-top-link">홈으로 돌아가기</a>
+        <h1>비밀번호 생성기</h1>
+        <p>안전하고 강력한 비밀번호를 만드삼</p>
+    </header>
+
+    <main>
+        <div id="copyMessage" class="copy-message">복사 완료</div>
+        <div class="generator-container">
+            <div class="result-container">
+                <span id="password-output">여기를 클릭하여 복사</span>
+                <button id="generate-btn" title="새로운 비밀번호 생성">🔄</button>
+            </div>
+
+            <div class="options-container">
+                <div class="option">
+                    <label for="length">비밀번호 길이</label>
+                    <input type="number" id="length" value="16" min="8" max="32">
+                </div>
+                <div class="option">
+                    <label for="uppercase">대문자 포함 (ABC)</label>
+                    <input type="checkbox" id="uppercase" checked>
+                </div>
+                <div class="option">
+                    <label for="lowercase">소문자 포함 (abc)</label>
+                    <input type="checkbox" id="lowercase" checked>
+                </div>
+                <div class="option">
+                    <label for="numbers">숫자 포함 (123)</label>
+                    <input type="checkbox" id="numbers" checked>
+                </div>
+                <div class="option">
+                    <label for="symbols">특수문자 포함 (!@#)</label>
+                    <input type="checkbox" id="symbols" checked>
+                </div>
+            </div>
+        </div>
+        
+        <section class="about-section">
+            <details>
+                <summary>
+                    <h2>📖 비밀번호 생성기 설명 및 정보 보기 <span class="summary-icon">▼</span></h2>
+                </summary>
+                <p class="about-description">
+                    이 도구는 암호학적으로 안전한 <strong class="highlight">`window.crypto`</strong> API를 사용하여 <strong class="highlight">예측 불가능한 무작위 비밀번호</strong>를 생성함.
+                </p>
+                <p class="about-description">
+                    원하는 길이와 포함할 문자 종류를 선택하여, 각종 웹사이트나 서비스에서 요구하는 보안 기준을 충족하는 <strong class="highlight">강력한 비밀번호</strong>를 만드삼.
+                </p>
+                <p class="about-description">
+                    생성된 비밀번호는 클릭 한 번으로 간편하게 <strong class="highlight">복사</strong>할 수 있삼.
+                </p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> 이정원의 도구 모음집. All rights reserved.</p>
+        <p>할 말 있으면 mogaattesu@gmail.com으로 메일 주삼</p>
+    </footer>
+
+    <div id="scrollToTop" class="scroll-to-top" title="맨 위로">↑</div>
+
+    <script src="../script.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
